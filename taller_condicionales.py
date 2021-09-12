@@ -87,6 +87,44 @@ else:
     print('Usted no tiene sanción, ni multa. El promedio obtenido es: ',
           promedio_puntos)
 print('El valor a pagar diario sera: ', multa)
-perdida_semana = int(input(f'La perdida total sera: {multa * 5}'))
+perdida_semana = int(input(f'La perdida total será: {multa * 5}'))
 
+# Una persona se encuentra con un problema de comprar un automóvil
+# o un terreno, los cuales cuestan exactamente lo mismo. Sabe que
+# mientras el automóvil se devalúa, con el terreno sucede lo contrario.
+# Esta persona comprará el automóvil si al cabo de tres años la
+# devaluación de este no es mayor que la mitad del incremento del
+# valor del terreno. Ayúdale a esta pesona a determinar si debe o no
+# comprar el automóvil.
+
+precio = int(input('Ingrese el valor del automóvil y del terreno: '))
+incremento = float(input('Ingrese el incremento anual del terreno: '))
+devaluacion = float(input('Ingrese la devaluación anual del automóvil: '))
+incr = float(((precio*incremento)/100)*3)/2
+print('La mitad del incremento del costo del terreno en 3 años será: ',
+      incr)
+deva = float((precio*devaluacion)/100)*3
+print('La devaluación del automóvil en 3 años será: ', deva)
+if(deva < incr):
+    print('Usted debe comprar el automóvil')
+else:
+    print('No debe comprar el automóvil')
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
