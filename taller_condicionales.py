@@ -130,6 +130,31 @@ else:
 print('Usted recibio un descuento de: ', desc)
 print('El total a pagar es: ', sub_total - desc)
 
+# Un proveedor de estéreos ofrece un descuento del 10% sobre el
+# precio sin IVA, de algún aparato si este cuesta $2000 o más. Además,
+# independientemente de esto, ofrece un 5% de descuento si la marca
+# es NOSY. Determinar cuanto pagará, con IVA incluido, un cliente
+# cualquiera por la compra de su aparato. IVA es del 16%.
 
+precio = int(input('Digite el precio del aparato: '))
+precio_iva = precio*1.16
+if(precio >= 2000):
+    marca = str(input('Digite la marca del aparato: '))
+    if(marca == "NOSY"):
+        desc = precio*0.10
+        sun_total = precio_iva - desc
+        desc2 = sub_total*0.05
+        total = sub_total - desc2
+        print('El total a pagar es: ', total)
+    else:
+        desc = precio*10
+        total = precio_iva - desc
+        print('El total a pagar es: ', total)
+else:
+    print(f'El total a pagar es:{precio_iva}, No se le aplica descuento')
 
-
+    
+        
+        
+        
+        
