@@ -98,32 +98,37 @@ perdida_semana = int(input(f'La perdida total será: {multa * 5}'))
 # comprar el automóvil.
 
 precio = int(input('Ingrese el valor del automóvil y del terreno: '))
-incremento = float(input('Ingrese el incremento anual del terreno: '))
-devaluacion = float(input('Ingrese la devaluación anual del automóvil: '))
+incremento = int(input('Ingrese el incremento anual del terreno: '))
+devaluacion = int(input('Ingrese la devaluación anual del automóvil: '))
 incr = float(((precio*incremento)/100)*3)/2
 print('La mitad del incremento del costo del terreno en 3 años será: ',
       incr)
-deva = float((precio*devaluacion)/100)*3
+deva = int((precio*devaluacion)/100)*3
 print('La devaluación del automóvil en 3 años será: ', deva)
 if(deva < incr):
     print('Usted debe comprar el automóvil')
 else:
     print('No debe comprar el automóvil')
-    
 
+# En una fábrica de computadoras se planea ofrecer a los clientes un
+# descuento que dependerá del número de computadoreas que
+# compre. Si las computadoras son menos de cinco se les dará un 10%
+# de descuento sobre el total de la compra; si el número de
+# computadoras es mayor o igual a cinco pero menos de diez se le
+# otorga un 20% de descuento; y si son 10 o más se les da un 40%. El
+# precio de cada computadora es de $11.000.
 
-
-
-
-
-
-
-
-
-
-
-
-
+num = int(input('Ingrese el número de computadores que desea comprar: '))
+sub_total = num*11000
+desc = 0
+if (num < 5):
+    desc = sub_total*0.10
+elif (num < 10):
+    desc = sub_total*0.20
+else:
+    desc = sub_total*0.40
+print('Usted recibio un descuento de: ', desc)
+print('El total a pagar es: ', sub_total - desc)
 
 
 
