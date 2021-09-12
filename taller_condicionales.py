@@ -51,7 +51,7 @@ print('El total a pagar es: ', total)
 # determinar cual será la cuota que debe pagar al cliente.
 
 monto = int(input('Digite el monto que desea financiar: '))
-valor_financiar = 0
+valor_cuota = 0
 if (monto < 50000):
     valor_cuota = monto*0.03
     print('Usted debe pagar el 3% de la cuota a financiar', valor_cuota)
@@ -60,6 +60,33 @@ else:
     print('Usted debe pagar el 2% de la cuota a financiar', valor_cuota)
 cuota_total = int(input(f'La cuota a pagar es: {valor_cuota + monto}'))
 
+# Una fábrica ha sido sometida a un programa de control de contaminación para
+# lo cual se efectúa una revisión de los puntos de contaminación generados
+# por la fábrica. El programa de control de contaminación consiste en medir
+# los puntos que emite la fábrica en cinco días de una semana y si el promedio
+# es superior a los 170 puntos entonces tendrá la sanción de parar su
+# producción por una semana y una multa del 50% de las ganancias diarias
+# cuando no se detiene la producción. Si el promedio obtenido de puntos es de
+# 170 o menos entonces no tendrá ni sanción ni multa. El dueño de la fábrica
+# desea saber cuanto dinero perderá después de ser sometido a la revisión.
 
+dia1 = int(input('Digite los puntos que emitio la fabrica el día 1: '))
+dia2 = int(input('Digite los puntos que emitio la fabrica el día 2: '))
+dia3 = int(input('Digite los puntos que emitio la fabrica el día 3: '))
+dia4 = int(input('Digite los puntos que emitio la fabrica el día 4: '))
+dia5 = int(input('Digite los puntos que emitio la fabrica el día 5: '))
+promedio_puntos = float(dia1+dia2+dia3+dia4+dia5)/5
+ganancia = int(
+    input('Ingrese las ganancias obtenidas en un día normal de produccion: '))
+if (promedio_puntos > 170):
+    multa = ganancia*0.50
+    print('Usted debe parar la producción por una semana y pagar una multa del'
+          ' 50% sobre las ganancias diarias, el promedio obtenido es: ',
+          promedio_puntos)
+else:
+    print('Usted no tiene sanción, ni multa. El promedio obtenido es: ',
+          promedio_puntos)
+print('El valor a pagar diario sera: ', multa)
+perdida_semana = int(input(f'La perdida total sera: {multa * 5}'))
 
-            
+    
