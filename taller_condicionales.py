@@ -200,9 +200,17 @@ else:
     resultado = num_uno + num_dos
     print('El primer número es menor, por lo tanto se hara una suma')
     print('El resultado es: ', resultado)
-        
 
+# Leer tres números diferentes e imprimir el número mayor de los tres.
 
-
-    
-        
+num_uno = float(input('Digite el primer número '))
+num_dos = float(input('Digite el segundo número '))
+num_tres = float(input('Digite el tercer número '))
+if (num_uno > num_dos and num_uno > num_tres):
+    print('El número mayor es: ', num_uno)
+elif (num_dos > num_uno and num_dos > num_tres):
+    print('El número mayor es: ', num_dos)
+elif (num_tres > num_uno and num_tres > num_dos):
+    print('El número mayor es: ', num_tres)
+else:
+    print('Los números son iguales')
