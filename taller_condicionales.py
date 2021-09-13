@@ -153,8 +153,35 @@ if(precio >= 2000):
 else:
     print(f'El total a pagar es:{precio_iva}, No se le aplica descuento')
 
+# Una empresa quiere hacer una compra de varias piezas de la misma
+# clase a una fábrica de refacciones. La empresa, dependiendo del
+# monto total de la compra, decidirá que hacer para pagar al fabricante.
+# Si el monto total de la compra excede de $500.000 la empresa tendrá
+# la capacidad de invertir de su propio dinero un 55% del monto de la
+# compra, pedir prestado al banco un 30% y el resto lo pagará
+# solicitando un crédito al fabricante. Si el monto total de la compra no
+# excede de $500.00 la empresa tendrá capacidad de invertir de su
+# propio dinero un 70% y el restante 30% lo pagará solicitando crédito
+# al fabricante. El fabricante cobra por concepto de interes un 20%
+# sobre la cantidad que se le pague a crédito. Obtener la cantidad a
+# inverir, valor del préstamo, valor del crédito y los intereses.
+
+num_piezas = int(input('Ingrese el número de piezas: '))
+costo_pieza = int(input('Ingrese el costo de la pieza: '))
+total = num_piezas*costo_pieza
+if(total > 500000):
+    inver_empresa = total*0.55
+    banco = total*0.30
+    print('Usted recibio un prestamo por parte del banco de: ', banco)
+    credito = total*0.70
+else:
+    inver_empresa = total*0.70
+    credito = total*0.30
+    print('Usted no recibio un prestamo de parte del banco')
+interes = credito*0.20
+print('Usted debe invertir: ', inver_empresa)
+print('Obtuvo un credito por: ', credito)
+print('Por intereses debe pagar: ', interes)
+
     
-        
-        
-        
         
