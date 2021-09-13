@@ -183,5 +183,26 @@ print('Usted debe invertir: ', inver_empresa)
 print('Obtuvo un credito por: ', credito)
 print('Por intereses debe pagar: ', interes)
 
+# Leer 2 números; si son iguales que lo multiplique, si el primero es
+# mayor que el segundo que los reste y sino que los sume.
+
+num_uno = float(input('Digite el primer número'))
+num_dos = float(input('Digite el segundo número'))
+if(num_uno == num_dos):
+    resultado = num_uno*num_dos
+    print('Los números son iguales, por lo tanto se multiplican')
+    print('El resultado es: ', resultado)
+elif (num_uno > num_dos):
+    resultado = num_uno - num_dos
+    print('El primer número es mayor, por lo tanto se hara una resta')
+    print('El resultado es:', resultado)
+else:
+    resultado = num_uno + num_dos
+    print('El primer número es menor, por lo tanto se hara una suma')
+    print('El resultado es: ', resultado)
+        
+
+
+
     
         
